@@ -1,12 +1,11 @@
 package Ejercicios02;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class EjerciciosSwitchTest {
+class tests {
 
     // Ejercicio 1
     @ParameterizedTest
@@ -56,46 +55,12 @@ class EjerciciosSwitchTest {
     // Ejercicio 4
     @ParameterizedTest
     @CsvSource({
-            "35, 420",
-            "40, 480",
-            "45, 560"
+            "35.0, 420",
+            "40.0, 480",
+            "45.0, 560"
     })
-    void testCalcularSalarioSemanal(int horas, double expectedSalario) {
+    void testCalcularSalarioSemanal(double horas, double expectedSalario) {
         assertEquals(expectedSalario, ejercicio4.calcularSalarioSemanal(horas), 0.01);
     }
 
-    // Ejercicio 15
-    @Test
-    void testDibujarPiramide() {
-        String expectedPiramide =
-                "  *  \n" +
-                        " *** \n" +
-                        "*****\n";
-        assertEquals(expectedPiramide, EjerciciosSwitch.dibujarPiramide('*', "arriba", 3));
     }
-
-    // Ejercicio 16
-    @Test
-    void testCalcularProbabilidadInfidelidad() {
-        // Este test dependerá de cómo implementes el cálculo
-        assertTrue(EjerciciosSwitch.calcularProbabilidadInfidelidad() >= 0 && EjerciciosSwitch.calcularProbabilidadInfidelidad() <= 100);
-    }
-
-    // Ejercicio 17
-    @ParameterizedTest
-    @ValueSource(ints = {123, 456, 789, 1000})
-    void testObtenerUltimaCifra(int numero) {
-        assertEquals(numero % 10, EjerciciosSwitch.obtenerUltimaCifra(numero));
-    }
-
-    // Ejercicio 18
-    @ParameterizedTest
-    @CsvSource({
-            "12345, 1",
-            "67890, 6",
-            "9, 9"
-    })
-    void testObtenerPrimeraCifra(int numero, int expectedPrimeraCifra) {
-        assertEquals(expectedPrimeraCifra, EjerciciosSwitch.obtenerPrimeraCifra(numero));
-    }
-

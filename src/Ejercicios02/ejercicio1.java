@@ -16,15 +16,15 @@ public class ejercicio1 {
             case "lunes":
                 return "Matemáticas";
             case "martes":
-                return "Historia";
-            case "miércoles":
-                return "Ciencias";
-            case "jueves":
                 return "Lengua";
+            case "miércoles":
+                return "Inglés";
+            case "jueves":
+                return "Ciencias";
             case "viernes":
-                return "Educación Física";
+                return "Historia";
             default:
-                return "Día no válido. Debe ser Lunes, Martes, Miércoles, Jueves o Viernes.";
+                return "Día no válido";
         }
     }
 }

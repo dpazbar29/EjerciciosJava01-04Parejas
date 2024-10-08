@@ -38,7 +38,7 @@ public class ejercicio3 {
                 dia = "Domingo";
                 break;
             default:
-                dia = "Número no válido. Debe ser del 1 al 7.";
+                dia = "Número no válido";
                 break;
         }
         return dia;

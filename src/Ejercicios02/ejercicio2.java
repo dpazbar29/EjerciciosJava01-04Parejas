@@ -14,11 +14,14 @@ public class ejercicio2 {
 
     public static String saludoPorHora(int hora) {
         if (hora >= 6 && hora <= 12) {
-            return "¡Buenos días!";
+            return "Buenos días";
         } else if (hora >= 13 && hora <= 20) {
-            return "¡Buenas tardes!";
-        } else {
-            return "¡Buenas noches!";
+            return "Buenas tardes";
+        } else if (hora == 24) {
+            return "Hora no válida";
+        }
+        else {
+            return "Buenas noches";
         }
     }
 }
