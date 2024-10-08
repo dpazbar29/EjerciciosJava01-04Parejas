@@ -1,5 +1,7 @@
 package Ejercicios03;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ejercicio15 {
@@ -12,23 +14,25 @@ public class ejercicio15 {
         System.out.print("Introduce el exponente (entero positivo): ");
         int exponente = scanner.nextInt();
 
-        String resultado = calcularPotencias(base, exponente);
-        System.out.println(resultado);
+        List<Double> resultado = calcularPotencias(base, exponente);
+        for (Double linea : resultado) {
+            System.out.println(linea);
+        }
 
         scanner.close();
     }
 
-    public static String calcularPotencias(double base, int exponente) {
-        StringBuilder potencias = new StringBuilder();
+    public static List<Double> calcularPotencias(double base, int exponente) {
+        List<Double> potencias = new ArrayList<>();
 
         for (int i = 1; i <= exponente; i++) {
             double potencia = 1;
             for (int j = 0; j < i; j++) {
                 potencia *= base;
             }
-            potencias.append(base).append(" ^ ").append(i).append(" = ").append(potencia).append("\n");
+            potencias.add(potencia);
         }
 
-        return potencias.toString().trim();
+        return potencias;
     }
 }

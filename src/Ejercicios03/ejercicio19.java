@@ -1,5 +1,7 @@
 package Ejercicios03;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ejercicio19 {
@@ -12,25 +14,30 @@ public class ejercicio19 {
         System.out.print("Introduce el carácter para pintar la pirámide: ");
         char caracter = scanner.next().charAt(0);
 
-        String piramide = crearPiramide(altura, caracter);
-        System.out.println(piramide);
+        List<String> piramide = crearPiramide(altura, caracter);
+        for (String linea : piramide) {
+            System.out.println(linea);
+        }
 
         scanner.close();
     }
 
-    public static String crearPiramide(int altura, char caracter) {
-        StringBuilder resultado = new StringBuilder();
+    public static List<String> crearPiramide(int altura, char caracter) {
+        List<String> resultado = new ArrayList<>();
 
         for (int i = 0; i < altura; i++) {
+            StringBuilder linea = new StringBuilder();
+
             for (int j = altura - i; j > 1; j--) {
-                resultado.append(" ");
+                linea.append(" ");
             }
             for (int k = 0; k <= i; k++) {
-                resultado.append(caracter).append(" ");
+                linea.append(caracter).append(" ");
             }
-            resultado.append("\n");
+
+            resultado.add(linea.toString().trim());
         }
 
-        return resultado.toString();
+        return resultado;
     }
 }
