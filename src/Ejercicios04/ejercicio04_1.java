@@ -1,6 +1,7 @@
+package Ejercicios04;
 import java.util.Random;
 
-public class ejercicio1 {
+public class ejercicio04_1 {
     public static void main(String[] args) {
         String resultado = tirarDados();
         System.out.println(resultado);

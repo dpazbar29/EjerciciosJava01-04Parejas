@@ -1,6 +1,7 @@
+package Ejercicios04;
 import java.util.Random;
 
-public class ejercicio2 {
+public class ejercicio04_2 {
     public static void main(String[] args) {
         String carta = obtenerCartaAleatoria();
         System.out.println(carta);

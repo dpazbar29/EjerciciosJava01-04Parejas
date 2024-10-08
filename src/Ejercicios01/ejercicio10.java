@@ -1,3 +1,4 @@
+package Ejercicios01;
 import java.util.Scanner;
 
 public class ejercicio10 {
@@ -16,6 +17,7 @@ public class ejercicio10 {
         public static double convertirKbAMb(double kilobytes) {
             return kilobytes / 1024;
         }
-    }
-
 }
+
+
+
