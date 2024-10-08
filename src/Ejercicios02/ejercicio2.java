@@ -8,11 +8,11 @@ public class ejercicio2 {
         System.out.print("Introduce la hora (0-23): ");
         int hora = scanner.nextInt();
 
-        String saludo = obtenerSaludo(hora);
+        String saludo = saludoPorHora(hora);
         System.out.println(saludo);
     }
 
-    public static String obtenerSaludo(int hora) {
+    public static String saludoPorHora(int hora) {
         if (hora >= 6 && hora <= 12) {
             return "¡Buenos días!";
         } else if (hora >= 13 && hora <= 20) {

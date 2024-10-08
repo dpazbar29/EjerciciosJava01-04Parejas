@@ -9,11 +9,11 @@ public class ejercicio3 {
         System.out.print("Introduce un número del 1 al 7: ");
         int numero = scanner.nextInt();
 
-        String dia = obtenerNombreDia(numero);
+        String dia = nombreDiaSemana(numero);
         System.out.println("El día de la semana es: " + dia);
     }
 
-    public static String obtenerNombreDia(int numero) {
+    public static String nombreDiaSemana(int numero) {
         String dia;
         switch (numero) {
             case 1:

@@ -7,11 +7,11 @@ public class ejercicio1 {
         System.out.print("Introduce un día de la semana (Lunes, Martes, Miércoles, Jueves, Viernes): ");
         String dia = scanner.nextLine();
 
-        String asignatura = obtenerAsignatura(dia);
+        String asignatura = asignaturaPorDia(dia);
         System.out.println("La asignatura que toca a primera hora el " + dia + " es: " + asignatura);
     }
 
-    public static String obtenerAsignatura(String dia) {
+    public static String asignaturaPorDia(String dia) {
         switch (dia.toLowerCase()) {
             case "lunes":
                 return "Matemáticas";
