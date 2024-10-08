@@ -2,10 +2,6 @@ package Ejercicios01;
 import java.util.Scanner;
 
 public class ejercicio9 {
-
-
-
-    public class VolumenCono {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             System.out.print("Introduce el radio del cono: ");
@@ -20,7 +16,5 @@ public class ejercicio9 {
         public static double calcularVolumenCono(double radio, double altura) {
             return (1.0 / 3) * Math.PI * Math.pow(radio, 2) * altura;
         }
-    }
-
-
 }
+

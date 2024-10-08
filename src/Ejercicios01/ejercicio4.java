@@ -8,18 +8,25 @@ public class ejercicio4 {
         double num1 = scanner.nextDouble();
         System.out.print("Introduce el segundo número: ");
         double num2 = scanner.nextDouble();
+
+        String resultado = realizarOperaciones(num1, num2);
+        System.out.println(resultado);
+
+        scanner.close();
+    }
+
+    public static String realizarOperaciones(double num1, double num2) {
         double suma = num1 + num2;
         double resta = num1 - num2;
         double multiplicacion = num1 * num2;
-        double division = num2 != 0 ? num1 / num2 : 0;
-        System.out.printf("Suma: %.2f\n", suma);
-        System.out.printf("Resta: %.2f\n", resta);
-        System.out.printf("Multiplicación: %.2f\n", multiplicacion);
+        String division;
+
         if (num2 != 0) {
-            System.out.printf("División: %.2f\n", division);
+            division = String.valueOf(num1 / num2);
         } else {
-            System.out.println("No se puede dividir entre cero.");
+            division = "No se puede dividir entre cero.";
         }
-        scanner.close();
+
+        return "Suma: " + suma + "\nResta: " + resta + "\nMultiplicación: " + multiplicacion + "\nDivisión: " + division;
     }
 }
